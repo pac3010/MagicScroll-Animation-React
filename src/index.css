@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 2s ease-out forwards;
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%); /* Start off-screen to the right */
+    opacity: 0; /* Completely transparent */
+  }
+  100% {
+    transform: translateX(0); /* End at the original position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+.slide-in-right {
+  animation: slideInRight 2s ease-out forwards;
+}
+
